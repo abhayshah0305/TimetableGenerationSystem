@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TTGS | Get Started</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link rel="stylesheet" type="text/css" href="static/css/aboutus.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
+
+    <style>
+        body {
+    padding-top: 3.5rem;
+}
+
+nav {
+    font-family: sans-serif;
+}
+
+.navbar-brand {
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+    </style>
+
+</head>
+<body>
+    <form id="form1">
+        <header>
+            <!--Navigation Bar-->
+			<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" href="#"><b>TIMETABLE GENERATOR</b></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'admindash' %}">Get Started</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'addInstructors' %}">Add Teachers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'addRooms' %}">Add Rooms</a>
+                    </li>
+                    <li class="nav-item">
+		                <a class="nav-link" href="{% url 'addTimings' %}">Add Timings</a>
+		            </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'addCourses' %}">Add Courses</a>
+                    </li>
+                    <li class="nav-item">
+			            <a class="nav-link" href="{% url 'addDepts' %}">Add Departments</a>
+		            </li>
+                    <li class="nav-item">
+			            <a class="nav-link" href="{% url 'addSections' %}">Add Sections</a>
+		            </li>
+                    <li class="nav-item active">
+			            <a class="nav-link" href="{% url 'generate' %}">Generate Timetable</a>
+		            </li>
+                    <li class="nav-item active">
+			            <a class="nav-link">|</a>
+		            </li>
+                    <li class="nav-item dropdown">
+		                <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account Settings</a>
+			            <div class="dropdown-menu" aria-labelledby="dropdown03">
+			                <a class="dropdown-item" href="{% url 'password_change' %}">Change Password</a>
+				            <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+			            </div>
+		            </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+         <main role="main">
+
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-4">TTGS | Generate Timetable</h1>
+      <p>Please make sure you have entered the correct information for the Teachers, Rooms, Timings, Courses, Sections and Departments
+        into the system. If you have not entered all the information yet please refer below on how to go about feeding all the information into the system.
+          Once confirmed please click on the "Generate Timetable" button below and wait patiently as TTGS generates your timetable for you.</p>
+      <p><a href="{% url 'timetable' %}" class="btn btn-primary btn-lg">Generate Timetable&raquo;</a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h2>1. Add Teachers</h2>
+        <p>Navigate to the "Add Teachers" section and add the corresponding details. Incorrect Details can also be removed via the "Edit Teacher" option.</p>
+
+      </div>
+      <div class="col-md-4">
+        <h2>2. Add Rooms</h2>
+        <p>Navigate to the "Add Rooms" section and add the corresponding details. Incorrect Details can also be removed via the "Edit Rooms" option.</p>
+
+      </div>
+      <div class="col-md-4">
+        <h2>3. Add Timings</h2>
+        <p>Navigate to the "Add Timings" section and add the corresponding details. Incorrect Details can also be removed via the "Edit Timings" option.</p>
+
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-4">
+        <h2>4. Add Courses</h2>
+        <p>Navigate to the "Add Courses" section and add the corresponding details. Incorrect Details can also be removed via the "Edit Courses" option.</p>
+
+      </div>
+      <div class="col-md-4">
+        <h2>5. Add Departments</h2>
+        <p>Navigate to the "Add Departments" section and add the corresponding details. Incorrect Details can also be removed via the "Edit Departments" option.</p>
+
+      </div>
+      <div class="col-md-4">
+        <h2>6. Add Sections</h2>
+        <p>Navigate to the "Add Sections" section and add the corresponding details. Incorrect Details can also be removed via the "Edit Sections" option.</p>
+
+      </div>
+    </div>
+
+     <br>
+
+    <div class="row">
+      <div class="col-md-4">
+        <h2>7. Generate Timetable</h2>
+        <p>Navigate to the "Generate Timetable" Section and click on Generate Timetable and wait patiently as our algorithm works its magic.</p>
+      </div>
+
+      </div>
+    </div>
+
+    <hr>
+
+  </div>
+
+</main>
+
+<footer class="container">
+  <p>&copy; ttgs. All Rights Reserved</p>
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.js"></script>
+
+    </form>
+</body>
+</html>

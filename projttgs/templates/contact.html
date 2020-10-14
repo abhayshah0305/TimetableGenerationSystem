@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>TTGS | Contact Us</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/" />
+    <link rel="stylesheet" type="text/css" href="static/css/contact.css"/>
+
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+
+}
+
+nav {
+    font-family: sans-serif;
+}
+
+.navbar-brand {
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+section{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff;
+    font-family: sans-serif;
+}
+
+section::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+
+}
+
+section .container
+{
+    position: relative;
+    min-width: 1100px;
+    min-height: 570px;
+    display: flex;
+    z-index: 1000;
+}
+
+section .container .contactinfo
+{
+    position: absolute;
+    top: 40px;
+    width: 350px;
+    height: calc(100% - 80px);
+    background: #0f3959;
+    z-index: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 20px 20px rgba(0,0,0,0.2);
+}
+
+section .container .contactinfo h2
+{
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+section .container .contactinfo .info
+{
+    position: relative;
+    margin: 20px 0;
+}
+
+section .container .contactinfo li{
+        position: relative;
+        list-style: none;
+        display: flex;
+        margin: 20px 0;
+        cursor: pointer;
+        align-items: flex-start;
+}
+
+section .container .contactinfo li span:nth-child(1)
+{
+    width: 30px;
+    min-width: 30px;
+}
+
+section .container .contactinfo li span:nth-child(1) i
+{
+    max-width: 100%;
+    filter: invert(1);
+    opacity: 0.5;
+}
+
+
+section .container .contactinfo li span:nth-child(2)
+{
+    color: #ffffff;
+    margin-left: 10px;
+    font-weight: 300;
+    opacity: 0.5;
+}
+
+section .container .contactinfo li:hover span:nth-child(1) i,
+section .container .contactinfo li:hover span:nth-child(2)
+    {
+        opacity: 1;
+    }
+
+section .container .contactinfo .sci
+{
+    position: relative;
+    display: flex;
+
+}
+
+section .container .contactinfo .sci li
+{
+    list-style: none;
+    margin-right: 15px;
+}
+
+section .container .contactinfo .sci li a
+{
+    text-decoration: none;
+}
+
+section .container .contactinfo .sci li a i
+{
+    filter: invert(1);
+    opacity: 0.5;
+}
+
+section .container .contactinfo .sci li:hover a i
+{
+    opacity: 1;
+}
+
+section .container .contactForm
+{
+    position: absolute;
+    padding: 70px 50px;
+    background: #ffffff;
+    margin-left: 150px;
+    padding-left: 250px;
+    width: calc(100% - 150px);
+    height: 100%;
+    box-shadow: 0 50px 50px rgba(0,0,0,0.5);
+
+}
+
+section .container .contactForm h2
+{
+    color: #0f3959;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+section .container .contactForm .formBox
+{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+
+section .container .contactForm .formBox .inputBox
+{
+    position: relative;
+    margin: 0 0 35px 0;
+}
+
+section .container .contactForm .formBox .inputBox.w50
+{
+    width: 47%;
+    color: #0b3e70;
+}
+
+section .container .contactForm .formBox .inputBox.w100
+{
+    width: 100%;
+}
+
+section .container .contactForm .formBox .inputBox input,
+section .container .contactForm .formBox .inputBox textarea
+{
+        width: 100% !important;
+        padding: 5px 0;
+        resize: none;
+        font-size: 18px;
+        font-weight: 300;
+        color: #0b3e70;
+        border: none;
+        border-bottom: 1px solid #777777;
+        outline: none;
+}
+
+section .container .contactForm .formBox .inputBox textarea
+{
+    min-height: 120px;
+}
+
+section .container .contactForm .formBox .inputBox span
+{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #333333;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+section .container .contactForm .formBox .inputBox input:focus ~ span,
+section .container .contactForm .formBox .inputBox textarea:focus ~ span,
+section .container .contactForm .formBox .inputBox input:valid ~ span,
+section .container .contactForm .formBox .inputBox textarea:valid ~ span
+{
+    transform: translateY(-20px);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+section .container .formBox .inputBox input[type=submit]
+{
+    position: relative;
+    cursor: pointer;
+    background: #0b3e70;
+    color: #0b3e70;
+    border: none;
+    max-width: 150px;
+    padding: 12px;
+}
+
+section .container .formBox .inputBox input[type=submit]:hover
+{
+    background: #333333;
+}
+
+.fa-facebook,
+.fa-twitter,
+.fa-google-plus-g,
+.fa-instagram,
+.fa-youtube {
+    color: #b2bbc1;
+    font-size: 2.3em;
+}
+
+.fa-facebook:hover,
+.fa-twitter:hover,
+.fa-google-plus-g:hover,
+.fa-instagram:hover,
+.fa-youtube:hover {
+    color: #d5d5d5;
+}
+
+.btn{
+    width: 100%;
+    color: #fff;
+    background-color: #0b3e70;
+}
+
+</style>
+</head>
+<body>
+    <header>
+            <!--Navigation Bar-->
+			<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" href="#"><b>TIMETABLE GENERATOR</b></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about' %}">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'help' %}">Help</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+		                <a class="nav-link" href="{% url 'login' %}">Login</a>
+		            </li>
+		            <li class="nav-item">
+			            <a class="nav-link" href="{% url 'register' %}">Sign Up</a>
+		            </li>
+                    </ul>
+                </div>
+            </nav>
+    </header><br>
+    <form method="post" id="form1" action="{% url 'contact' %}">
+    {% csrf_token %}
+        <section>
+        <div class="container">
+            <div class="contactinfo">
+                <div>
+                    <h2>Contact Information</h2>
+                    <ul class="info">
+                        <li>
+                            <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                            <span>Om Vikas Tower<br />
+                                Mumbai, MH, India<br />
+                                400006
+                            </span>
+                        </li>
+                        <li>
+                            <span><i class="fa fa-envelope" aria-hidden="true"></i></i></span>
+                            <span>contact@ttgs.com</span>
+                        </li>
+                        <li>
+                            <span><i class="fa fa-phone" aria-hidden="true"></i></span>
+                            <span>+91-9812906229</span>
+                        </li>
+                    </ul>
+                    </div>
+                    <ul class="sci">
+                        <li><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://myaccount.google.com/intro/personal-info"><i class="fab fa-google-plus-g"></i></a> </li>
+                        <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+            </div>
+            <div class="contactForm">
+                <h2>Send a Message</h2>
+                <div class="formBox">
+                    <div class="inputBox w50">
+                        <input type="" required>
+                        <span>First Name</span>
+                    </div>
+                    <div class="inputBox w50">
+                        <input type="" required>
+                        <span>Last Name</span>
+                    </div>
+                    <div class="inputBox w50">
+                        <input type="email" required>
+                        <span>E-mail Address</span>
+                    </div>
+                    <div class="inputBox w50">
+                        <input type="" required>
+                        <span>Mobile Number</span>
+                    </div>
+                    <div class="inputBox w100">
+                        <textarea name="message" id="inputBox w-50" TextMode="MultiLine" required></textarea>
+                        <span>Write Your Message Here...</span>
+                    </div>
+                    <div class="inputBox w100">
+                        <button class="btn" type="submit" >Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+    </form>
+</body>
+</html>

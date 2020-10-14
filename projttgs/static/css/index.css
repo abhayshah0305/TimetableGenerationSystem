@@ -1,0 +1,186 @@
+
+body {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    color: #5a5a5a;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+nav {
+    font-family: sans-serif;
+}
+
+.navbar-brand {
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.carousel {
+    margin-bottom: 0;
+}
+
+.carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+}
+
+.carousel-item {
+    height: 415px;
+}
+
+    .carousel-item > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        height: 30rem;
+    }
+
+.padding {
+    padding-bottom: 2rem;
+}
+
+.welcome {
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+
+    .welcome hr {
+        border-top: 1px solid #b4b4b4;
+        width: 95%;
+        margin-top: 0.3rem;
+        margin-bottom: 1rem;
+    }
+
+.fa-bolt {
+    color: #5a5a5a;
+}
+
+.fa-lock {
+    color: #5a5a5a;
+}
+
+.fa-check-square {
+    color: #5a5a5a;
+}
+
+.fa-bolt, .fa-lock, .fa-check-square {
+    font-size: 4em;
+    margin: 1rem;
+}
+
+.jumbotron{
+    padding:1rem;
+    border-radius:0;
+}
+
+.social a {
+    font-size: 4.5em;
+    padding: 2rem;
+}
+
+.fa-facebook {
+    color: #3b5998;
+}
+
+.fa-twitter {
+    color: #00aced;
+}
+
+.fa-google-plus-g {
+    color: #dd4b39;
+}
+
+.fa-instagram {
+    color: #517fa4;
+}
+
+.fa-youtube {
+    color: #bb0000;
+}
+
+    .fa-facebook:hover,
+    .fa-twitter:hover,
+    .fa-google-plus-g:hover,
+    .fa-instagram:hover,
+    .fa-youtube:hover {
+        color: #d5d5d5;
+    }
+
+footer {
+    background-color: #3f3f3f;
+    color: #d5d5d5;
+    padding-top: 2rem;
+}
+
+hr.light {
+    border-top: 1px solid #d5d5d5;
+    width: 75%;
+    margin-top: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+footer a {
+    color: #d5d5d5;
+}
+
+@media(max-width:992px){
+    .social a{
+        font-size: 4em;
+        padding: 2rem;
+    }
+}
+
+@media(max-width:768px)
+{
+    .social a{
+        font-size: 2.5em;
+        padding: 1.2rem;
+    }
+}
+
+.marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.marketing h2 {
+    font-weight: 400;
+}
+
+.marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+}
+
+.featurette-divider {
+    margin: 5rem 0;
+}
+
+
+.featurette-heading {
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -.05rem;
+}
+
+@media (min-width: 40em) {
+
+    .carousel-caption p {
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+        line-height: 1.4;
+    }
+
+    .featurette-heading {
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 62em) {
+    .featurette-heading {
+        margin-top: 7rem;
+    }
+}

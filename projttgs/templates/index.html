@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TTGS | Timetable Generation System</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
+
+     <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="static/css/index.css">
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+            <!--Navigation Bar-->
+			<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" href="#"><b>TIMETABLE GENERATOR</b></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about' %}">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'help' %}">Help</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+		                <a class="nav-link" href="{% url 'login' %}">Login</a>
+		            </li>
+		            <li class="nav-item">
+			            <a class="nav-link" href="{% url 'register' %}">Sign Up</a>
+		            </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!--Image Carousel-->
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
+            <img src="static/img/CarouselBG.png" />
+        <div class="container">
+          <div class="carousel-caption text-left">
+            <h1><b>Easy to Use.</b></h1>
+            <p>A Simple and Easy to use Timetable Generation tool for Colleges and Universities. Click on the Help Button for Assistance in Generating the Timetable.</p>
+            <p><a class="btn btn-lg btn-primary" href="{% url 'help' %}" role="button">Help</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
+          <img src="static/img/CarouselBG.png" />
+          <div class="container">
+          <div class="carousel-caption">
+            <h1><b>Efficient and Reliable.</b></h1>
+            <p>An efficient and a reliable tool to generate and save your Timetable with collision avoidance. Learn more about TTGS.</p>
+            <p><a class="btn btn-lg btn-primary" href="{% url 'about' %}" role="button">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
+          <img src="static/img/CarouselBG.png" />
+          <div class="container">
+          <div class="carousel-caption text-right">
+            <h1><b>Simple and Non-Complex.</b></h1>
+            <p>The Development Process is Simplified using a Clean and an Elegant User Interface with Minimal Complexities.</p>
+            <p><a class="btn btn-lg btn-primary" href="{% url 'login' %}" role="button">Generate Timetable</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+    <!--Jumbotron-->
+    <div class="container-fluid">
+    <div class="row jumbotron">
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+            <p class="lead">Welcome to TTGS!, a timetable management system for colleges and universities to schedule their organization's timetable.
+                If your organization faces any challenges while generating or manipulating your timetable or have any concerns regarding the system please contact us.
+            </p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
+            <a href="{% url 'contact' %}"><button type="button" class="btn btn-outline-secondary btn-lg">Contact Us</button></a>
+        </div>
+    </div>
+    </div>
+    <!--Build with Ease and Logos section-->
+    <div class="container-fluid padding">
+    <div class="row welcome text-center">
+        <div class="col-12">
+            <h1 class="display-4">Build with ease.</h1>
+        </div>
+        <hr />
+        <div class="col-12">
+            <p class="lead">
+                A Timetable Generation Tool that allows the swift, efficient and smooth generation of college and university timetables with complete collision avoidance.
+            </p>
+        </div>
+    </div>
+    </div>
+    <div class="container-fluid">
+    <div class="row text-center padding">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+            <i class="fa fa-bolt" aria-hidden="true"></i>
+            <h3>Fast</h3>
+            <p>Fast and Smooth Scheduling.</p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4">
+            <i class="fa fa-lock" aria-hidden="true"></i>
+            <h3>Secure</h3>
+            <p>Secure Scheduling Process.</p>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <i class="fa fa-check-square" aria-hidden="true"></i>
+            <h3>Reliable</h3>
+            <p>Reliable and Trustworthy Process.</p>
+        </div>
+    </div>
+    <hr class="my-4"/>
+    </div>
+
+    <!--Connect Section-->
+    <div class="container-fluid padding">
+    <div class="row text-center padding">
+        <div class="col-12">
+            <h2>Connect</h2>
+        </div>
+        <div class="col-12 social padding">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+            <a href="https://myaccount.google.com/intro/personal-info"><i class="fab fa-google-plus-g"></i></a>
+            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+    </div>
+    <!--Footer-->
+    <footer>
+        <div class="container-fluid padding">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <hr class="light">
+                <h5>Our Address</h5>
+                <hr class="light">
+                <p>+91 9823451278</p>
+                <p>contactus@ttgs.com</p>
+                <p>1901/B, Om Vikas</p>
+                <p>Mumbai, Mahrashtra,400006</p>
+            </div>
+            <div class="col-md-4">
+                <hr class="light" />
+                <h5>Our Hours</h5>
+                <hr class="light" />
+                <p>Monday: 9PM-5PM</p>
+                <p>Saturday:10AM-4PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+            <div class="col-md-4">
+                <hr class="light">
+                <h5>Service Areas</h5>
+                <hr class="light" />
+                <p>Mumbai, Maharashtra</p>
+                <p>Ahmedabad, Gujarat</p>
+                <p>Chennai, Tamil Nadu</p>
+                <p>Bhopal, Madhya Pradesh</p>
+            </div>
+            <div class="col-12">
+                <hr class="light" />
+                <h5>&copy; ttgs.com</h5>
+            </div>
+        </div>
+        </div>
+    </footer>
+   </form>
+</body>
+</html>
