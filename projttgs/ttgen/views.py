@@ -445,3 +445,8 @@ class Pdf(View):
             'request': request
         }
         return Render.render('gentimetable.html', params)
+
+#################################################################################
+
+def chatbot(request):
+    return render(request, 'chatbot.html')
