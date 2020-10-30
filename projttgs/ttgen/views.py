@@ -1,4 +1,4 @@
-
+from django.http import request
 from django.shortcuts import render, redirect
 from. forms import *
 from .models import *
@@ -7,6 +7,9 @@ from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from .render import Render
 from django.views.generic import View
+from chatterbot import ChatBot
+from chatterbot.trainers import ListTrainer
+from chatterbot.trainers import ChatterBotCorpusTrainer
 
 
 POPULATION_SIZE = 9
@@ -448,5 +451,31 @@ class Pdf(View):
 
 #################################################################################
 
-def chatbot(request):
+chatbot = ChatBot('TTGS Chatbot')
+
+ # Training with Personal Ques & Ans
+conversation = [
+    "Hello",
+    "Hi there!",
+    "How are you doing?",
+    "I'm doing great.",
+    "That is good to hear",
+    "Thank you.",
+    "You're welcome."
+]
+
+trainer = ListTrainer(chatbot)
+trainer.train(conversation)
+
+# Training with English Corpus Data
+trainer_corpus = ChatterBotCorpusTrainer(chatbot)
+trainer_corpus.train(
+    'chatterbot.corpus.english'
+)
+
+def chat(request):
     return render(request, 'chatbot.html')
+
+def get_bot_response():
+    userText = request.args.get('msg')
+    return str(chatbot.get_response(userText))
