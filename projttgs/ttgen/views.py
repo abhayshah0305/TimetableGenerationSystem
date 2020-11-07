@@ -1,6 +1,6 @@
 from django.http import request
 from django.shortcuts import render, redirect
-from. forms import *
+from . forms import *
 from .models import *
 from django.core.mail import send_mail
 from django.conf import settings
@@ -451,31 +451,10 @@ class Pdf(View):
 
 #################################################################################
 
-chatbot = ChatBot('TTGS Chatbot')
-
- # Training with Personal Ques & Ans
-conversation = [
-    "Hello",
-    "Hi there!",
-    "How are you doing?",
-    "I'm doing great.",
-    "That is good to hear",
-    "Thank you.",
-    "You're welcome."
-]
-
-trainer = ListTrainer(chatbot)
-trainer.train(conversation)
-
-# Training with English Corpus Data
-trainer_corpus = ChatterBotCorpusTrainer(chatbot)
-trainer_corpus.train(
-    'chatterbot.corpus.english'
-)
-
 def chat(request):
     return render(request, 'chatbot.html')
 
-def get_bot_response():
-    userText = request.args.get('msg')
-    return str(chatbot.get_response(userText))
+# def get_bot_response():
+#     userText = request.args.get('msg')
+#     return str(chatbot.get_response(userText))
+
