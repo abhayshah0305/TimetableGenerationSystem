@@ -230,7 +230,7 @@ fieldset button
 			            <a class="nav-link">|</a>
 		            </li>
                     <li class="nav-item dropdown">
-		                <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account Settings</a>
+		                <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hello, {{ user.get_username }}</a>
 			            <div class="dropdown-menu" aria-labelledby="dropdown03">
 			                <a class="dropdown-item" href="{% url 'password_change' %}">Change Password</a>
 				            <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
