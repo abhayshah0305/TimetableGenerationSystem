@@ -7,9 +7,6 @@ from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from .render import Render
 from django.views.generic import View
-from chatterbot import ChatBot
-from chatterbot.trainers import ListTrainer
-from chatterbot.trainers import ChatterBotCorpusTrainer
 
 
 POPULATION_SIZE = 9
