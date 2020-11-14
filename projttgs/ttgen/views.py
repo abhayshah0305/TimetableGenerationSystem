@@ -449,12 +449,4 @@ class Pdf(View):
         }
         return Render.render('gentimetable.html', params)
 
-#################################################################################
-
-def chat(request):
-    return render(request, 'chatbot.html')
-
-# def get_bot_response():
-#     userText = request.args.get('msg')
-#     return str(chatbot.get_response(userText))
 
