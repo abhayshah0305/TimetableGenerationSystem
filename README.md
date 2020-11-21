@@ -1,1 +1,1 @@
-# TimetableGenerationSystem
+# TTGS | TimetableGenerationSystem
