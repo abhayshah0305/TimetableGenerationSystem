@@ -15,7 +15,7 @@
 
 <p>Upon successfull entry of the data into sqlite database, the user can navigate to the "Generate Timetable" page to start the process of generating the timetable. Upon successfull generation of the timetable the user can download the timetable as a PDF.</p>   
 
-<h5>Technologies Used</h5>
+<p><b>Technologies Used</b></p>
 <ul>
   <li>HTML5</li>
   <li>CSS3</li>
