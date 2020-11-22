@@ -14,3 +14,13 @@
 </ol>
 
 <p>Upon successfull entry of the data into sqlite database, the user can navigate to the "Generate Timetable" page to start the process of generating the timetable. Upon successfull generation of the timetable the user can download the timetable as a PDF.</p>   
+
+<h3>Technologies Used</h3>
+<ul>
+  <li>HTML5</li>
+  <li>CSS3</li>
+  <li>Python 3.8</li>
+  <li>Django 3.0.*</li>
+  <li>JavaScript</li>
+  <li>sqlite3</li>
+</ul>
