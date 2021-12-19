@@ -132,7 +132,7 @@ LOGIN_REDIRECT_URL = 'admindash'
 LOGOUT_URL = 'logout'
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'codevoid12@gmail.com'
+EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = ''
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
