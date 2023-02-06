@@ -34,5 +34,4 @@
   <li>Open your browser and access localhost at port http://127.0.0.1:8000/</li>
 </ol>
 
-<h3>Contact</h3>
-<p>Email: shah.abhay.18bit048@gmail.com</p>
+
