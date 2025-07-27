@@ -31,7 +31,7 @@
   <li>Access the project files by using an IDE (PyCharm or Spyder) or via the command line
   <li>Enter the directory of the main project via the command line or the terminal on the IDE</li>
   <li>Run the command "python manage.py runserver"</li>
-  <li>Open your browser and access localhost at port http://127.0.0.1:8000/</li>
+  <li>Open your browser and access localhost at port http://127.0.0.1:8000//</li>
 </ol>
 
 
